@@ -1,0 +1,20 @@
+:root {
+    --stie-bg-color-quiz: #F7F7F7;
+}
+
+.light-theme {
+    --stie-bg-color-quiz: #F7F7F7;
+    --box-shadow: #F7F7F7;
+    --quiz-app-option-color: var(--dui-primary-color-p2-lgt-30pct);
+    --quiz-app-quiz-select-card: var(--dui-primary-color-p2-lgt-30pct);
+}
+
+.dark-theme {
+    --dui-light-theme-bg: #000000;
+    --dui-light-theme-contrast-txt: #ffffff;
+
+    --stie-bg-color-quiz: #374151;
+    --box-shadow: #F7F7F7;
+    --quiz-app-option-color: var(--dui-primary-color-p2);
+    --quiz-app-quiz-select-card: var(--dui-primary-color-p2);
+}
