@@ -1,12 +1,11 @@
-import "./quiz-page.css"
+import "./quiz-page.css";
+import { Navbar } from "../../components";
 
 export default function QuizPage() {
     return (
     <section class="page-wrap">
         <section class="page-nav">
-            <nav class="nav">
-                <p class="dui-util-txt-md dui-util-fw-sbld" >Know Your Plant</p>
-            </nav>
+            <Navbar></Navbar>
         </section>
 
         <section class="page-header">
