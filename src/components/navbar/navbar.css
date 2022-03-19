@@ -1,0 +1,11 @@
+.dui-always-white-color {
+    color: var(--dui-always-white)
+}
+
+.dui-link--invt-primary {
+    border-radius: 999px;
+}
+
+.quiz-app-dui-nav-sch-act__drk-mode-btn>svg {
+    stroke: var(--dui-always-white);
+}
