@@ -34,14 +34,11 @@ export default function CategoryPage() {
               return (
                 <Link
                   className="category-page-namespace category-card dui-util-bdr-radi-m"
-                  to="/"
+                  to="/quiz-category"
                 >
                   <img
                     className="category-page-namespace category-card__img dui-util-bdr-radi-m"
-                    src={
-                      "http://localhost:3001/" +
-                      "/assets/images/dummy-pot-plant.png"
-                    }
+                    src={category.categoryImg}
                   />
                   <p className="category-page-namespace category-card__title dui-primary-bg-color-opc-75pct">
                     {category.categoryName}

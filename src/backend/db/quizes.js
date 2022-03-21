@@ -1,52 +1,53 @@
 import { v4 as uuid } from "uuid";
 
-const quizeQuestions = {
-  questions: [
+const quizesByCategory = {
+  "9e6be463-6dda-4ace-9667-670d571d6c22": [
     {
       _id: uuid(),
-      question: "Quest 1",
-      options: [
-        { _id: "1", option: "Option 1" },
-        { _id: "2", option: "Option 2" },
-        { _id: "3", option: "Option 3" },
-        { _id: "4", option: "Option 4" },
-      ],
-      correctAnswerId: "1",
+      quizName: "Quiz 1",
+      quizDescription: "Quiz Description",
+      quizTotalQuestions: 5,
     },
     {
       _id: uuid(),
-      question: "Quest 2",
-      options: [
-        { _id: "1", option: "Option 1" },
-        { _id: "2", option: "Option 2" },
-        { _id: "3", option: "Option 3" },
-        { _id: "4", option: "Option 4" },
-      ],
-      correctAnswerId: "2",
+      quizName: "Quiz 1",
+      quizDescription: "Quiz Description",
+      quizTotalQuestions: 5,
     },
     {
       _id: uuid(),
-      question: "Quest 3",
-      options: [
-        { _id: "1", option: "Option 1" },
-        { _id: "2", option: "Option 2" },
-        { _id: "3", option: "Option 3" },
-        { _id: "4", option: "Option 4" },
-      ],
-      correctAnswerId: "3",
+      quizName: "Quiz 1",
+      quizDescription: "Quiz Description",
+      quizTotalQuestions: 5,
     },
     {
       _id: uuid(),
-      question: "Quest 4",
-      options: [
-        { _id: "1", option: "Option 1" },
-        { _id: "2", option: "Option 2" },
-        { _id: "3", option: "Option 3" },
-        { _id: "4", option: "Option 4" },
-      ],
-      correctAnswerId: "5",
+      quizName: "Quiz 1",
+      quizDescription: "Quiz Description",
+      quizTotalQuestions: 5,
+    },
+  ],
+  "95652d9d-f6a7-4088-92f1-429da1a3fe64": [
+    {
+      _id: uuid(),
+      quizName: "Quiz 1",
+      quizDescription: "Quiz Description",
+    },
+  ],
+  "e3acb503-9e2b-46d5-8ff6-e4f2bf97225b": [
+    {
+      _id: uuid(),
+      quizName: "Quiz 1",
+      quizDescription: "Quiz Description",
+    },
+  ],
+  "b952f1b6-bbe0-4976-bc5a-d92c9837f387": [
+    {
+      _id: uuid(),
+      quizName: "Quiz 1",
+      quizDescription: "Quiz Description",
     },
   ],
 };
 
-export { quizeQuestions };
+export { quizesByCategory };

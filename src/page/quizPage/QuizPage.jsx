@@ -2,7 +2,7 @@ import "./quiz-page.css";
 import { Navbar } from "../../components";
 import { useEffect } from "react";
 import { useQuiz } from "../../context";
-import { quizeQuestions } from "../../backend/db/quizes";
+import { quizeQuestions } from "../../backend/db/quizesQuestions";
 import { useNavigate } from "react-router-dom";
 
 export default function QuizPage() {

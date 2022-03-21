@@ -1,7 +1,16 @@
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { quizesByCategory } from "../../backend/db/quizes";
 import { Navbar } from "../../components";
 import "./quiz-category-page.css";
 
 export default function QuizCategoryPage() {
+  const [quizes, setQuizes] = useState([]);
+  useEffect(() => {
+    const uuid = "9e6be463-6dda-4ace-9667-670d571d6c22";
+    setQuizes(quizesByCategory[uuid]);
+  }, []);
+
   return (
     <section class="quiz-category-page-namespace page-wrap">
       <section class="quiz-category-page-namespace page-nav">
@@ -15,23 +24,23 @@ export default function QuizCategoryPage() {
           </h1>
 
           <div class="quiz-card-container">
-            <div class="quiz-card dui-util-bdr-radi-m">
-              <div class="quiz-card__img dui-util-bdr-radi-m"></div>
-              <div class="quiz-card__info dui-util-spc-pad-s">
-                <h2 class="quiz-card__title">Quiz Title</h2>
-                <p class="quiz-card__desc">Quiz Description</p>
-                <p class="quiz-card__ques-info">5 Questions</p>
-              </div>
-            </div>
-
-            <div class="quiz-card dui-util-bdr-radi-m">
-              <div class="quiz-card__img dui-util-bdr-radi-m"></div>
-              <div class="quiz-card__info dui-util-spc-pad-s">
-                <h2 class="quiz-card__title">Quiz Title</h2>
-                <p class="quiz-card__desc">Quiz Description</p>
-                <p class="quiz-card__ques-info">5 Questions</p>
-              </div>
-            </div>
+            {quizes.map((quiz) => {
+              return (
+                <Link
+                  class="quiz-card dui-util-bdr-radi-m dui-util-txt-decoration-none"
+                  to="/"
+                >
+                  <div class="quiz-card__img dui-util-bdr-radi-m"></div>
+                  <div class="quiz-card__info dui-util-spc-pad-s">
+                    <h2 class="quiz-card__title">{quiz.quizName}</h2>
+                    <p class="quiz-card__desc">{quiz.quizDescription}</p>
+                    <p class="quiz-card__ques-info">
+                      {`${quiz.quizTotalQuestions} Questions`}
+                    </p>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </main>
       </section>
