@@ -18,44 +18,40 @@ export default function QuizPage() {
   }, []);
 
   return (
-    <section class="page-wrap">
-      <section class="page-nav">
+    <section class="quiz-page-namespace page-wrap">
+      <section class="quiz-page-namespace page-nav">
         <Navbar></Navbar>
       </section>
 
-      <section class="page-header"></section>
-
-      <section class="page-sidebar"></section>
-
-      <section class="page-main">
+      <section class="quiz-page-namespace page-main">
         <main class="main-container dui-util-spc-pad-m">
-          <div class="quiz-card">
-            <h1 class="quiz-card__title dui-primary-color dui-util-txt-align-cent">
+          <div class="question-card">
+            <h1 class="question-card__title dui-primary-color dui-util-txt-align-cent">
               Plant Types
             </h1>
 
-            <p class="quiz-card__question dui-util-txt-align-cent dui-util-spc-pad-s dui-util-txt-md">
+            <p class="question-card__question dui-util-txt-align-cent dui-util-spc-pad-s dui-util-txt-md">
               {quizState.questions[quizState.questionIdx].question}
             </p>
 
-            <div class="quiz-card__status dui-util-spc-pad-s">
-              <p class="quiz-card__ques-status dui-util-txt-align-left">
+            <div class="question-card__status dui-util-spc-pad-s">
+              <p class="question-card__ques-status dui-util-txt-align-left">
                 Question:{" "}
                 <span>
                   {quizState.questionIdx + 1}/{quizState.questions.length}
                 </span>
               </p>
-              <p class="quiz-card__score-status dui-util-txt-align-right">
+              <p class="question-card__score-status dui-util-txt-align-right">
                 Score: <span>0</span>
               </p>
             </div>
 
-            <ul class="dui-ul quiz-card__options">
+            <ul class="dui-ul question-card__options">
               {quizState.questions[quizState.questionIdx].options.map((op) => {
                 return (
                   <li
                     key={op._id}
-                    class="quiz-card__option dui-util-bdr-radi-m dui-util-spc-pad-s"
+                    class="question-card__option dui-util-bdr-radi-m dui-util-spc-pad-s"
                     onClick={(e) => {
                       let newQuizState = { ...quizState };
                       const isCorrect =
@@ -95,27 +91,10 @@ export default function QuizPage() {
                   </li>
                 );
               })}
-              {/* <li class="quiz-card__option dui-util-bdr-radi-m dui-util-spc-pad-s">
-                <p>
-                  <span class="dui-util-fw-bld">1) </span>Option 1
-                </p>
-              </li>
-              <li class="quiz-card__option dui-util-bdr-radi-m dui-util-spc-pad-s">
-                <p>
-                  <span class="dui-util-fw-bld">2) </span>Option 1
-                </p>
-              </li>
-              <li class="quiz-card__option dui-util-bdr-radi-m dui-util-spc-pad-s">
-                <p>
-                  <span class="dui-util-fw-bld">3) </span>Option 1
-                </p>
-              </li> */}
             </ul>
           </div>
         </main>
       </section>
-
-      <section class="page-footer"></section>
     </section>
   );
 }

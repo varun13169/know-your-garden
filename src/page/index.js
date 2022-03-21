@@ -1,5 +1,5 @@
-// import QuizCategoryPage from "./quizCategoryPage/QuizCategoryPage";
+import QuizCategoryPage from "./quizCategoryPage/QuizCategoryPage";
 import CategoryPage from "./categoryPage/CategoryPage";
 import QuizPage from "./quizPage/QuizPage";
 
-export { QuizPage, CategoryPage };
+export { CategoryPage, QuizCategoryPage, QuizPage };

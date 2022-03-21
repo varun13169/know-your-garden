@@ -1,16 +1,15 @@
+import { Navbar } from "../../components";
 import "./quiz-category-page.css";
 
 export default function QuizCategoryPage() {
   return (
-    <section class="page-wrap">
-      <section class="page-nav">
-        <nav class="nav">
-          <p class="dui-util-txt-md dui-util-fw-sbld">Know Your Plant</p>
-        </nav>
+    <section class="quiz-category-page-namespace page-wrap">
+      <section class="quiz-category-page-namespace page-nav">
+        <Navbar></Navbar>
       </section>
 
-      <section class="page-main">
-        <main class="main-container dui-util-spc-pad-m">
+      <section class="quiz-category-page-namespace page-main">
+        <main class="quiz-category-page-namespace main-container dui-util-spc-pad-m">
           <h1 class="quiz-category-title dui-primary-color dui-util-txt-align-cent">
             Quiz Category
           </h1>

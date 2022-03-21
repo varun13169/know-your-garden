@@ -29,21 +29,21 @@ export default function CategoryPage() {
             Quiz Category
           </h1>
 
-          <div className="category-page-namespace quiz-card-container">
+          <div className="category-page-namespace category-card-container">
             {categories.map((category) => {
               return (
                 <Link
-                  className="category-page-namespace quiz-card dui-util-bdr-radi-m"
+                  className="category-page-namespace category-card dui-util-bdr-radi-m"
                   to="/"
                 >
                   <img
-                    className="category-page-namespace quiz-card__img dui-util-bdr-radi-m"
+                    className="category-page-namespace category-card__img dui-util-bdr-radi-m"
                     src={
                       "http://localhost:3001/" +
                       "/assets/images/dummy-pot-plant.png"
                     }
                   />
-                  <p className="category-page-namespace quiz-card__title dui-primary-bg-color-opc-75pct">
+                  <p className="category-page-namespace category-card__title dui-primary-bg-color-opc-75pct">
                     {category.categoryName}
                   </p>
                 </Link>
