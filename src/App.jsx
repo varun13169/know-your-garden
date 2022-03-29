@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { QuizPage, CategoryPage, QuizCategoryPage } from "./page";
+import { QuizPage, CategoryPage, QuizCategoryPage, RulesPage } from "./page";
 import { getTheme } from "./utilScripts/themeUtils";
 
 export default function App() {
@@ -9,6 +9,7 @@ export default function App() {
         <Route path="/" element={<CategoryPage />} />
         <Route path="/quiz/:id" element={<QuizPage />} />
         <Route path="/quiz-category/:id" element={<QuizCategoryPage />} />
+        <Route path="/rules/:id" element={<RulesPage />} />
       </Routes>
     </div>
   );

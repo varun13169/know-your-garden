@@ -1,53 +1,60 @@
-import "./rules-page.css"
+import "./rules-page.css";
+import { Link, useParams } from "react-router-dom";
 
 export default function RulesPage() {
-    return(
+  const { id } = useParams();
 
-    <section class="page-wrap">
-    <section class="page-main">
-        <main class="main-container">
-            <section class="rules-card dui-util-spc-pad-s dui-util-bdr-radi-l">
+  return (
+    <section className="rules-page-namespace page-wrap">
+      <section className="rules-page-namespace page-main">
+        <main className="rules-page-namespace main-container">
+          <section className="rules-card dui-util-spc-pad-s dui-util-bdr-radi-l">
+            <div className="rules-card__title dui-util-spc-pad-xs">
+              <h2 className="dui-primary-color">Game Rules</h2>
+            </div>
 
-                <div class="rules-card__title dui-util-spc-pad-xs">
-                    <h2 class="dui-primary-color">Game Rules</h2>
-                </div>
+            <ul className="rules-card__rules-list dui-util-spc-pad-xs">
+              <li>
+                <p className="dui-util-fw-sbld">
+                  Each question will have 4 options
+                </p>
+              </li>
+              <li>
+                <p className="dui-util-fw-sbld">
+                  Correct option will reward you with 5 points
+                </p>
+              </li>
+              <li>
+                <p className="dui-util-fw-sbld">
+                  Incorrect option will set you back with 3 points
+                </p>
+              </li>
+              <li>
+                <p className="dui-util-fw-sbld">
+                  You will be directed to the next screen incase of timeout, no
+                  points will be rewarded or deducted.
+                </p>
+              </li>
+            </ul>
 
-                <ul class="rules-card__rules-list dui-util-spc-pad-xs">
-                    <li>
-                        <p class="dui-util-fw-sbld">Each question will have 4 options</p>
-                    </li>
-                    <li>
-                        <p class="dui-util-fw-sbld">Correct option will reward you with 5 points</p>
-                    </li>
-                    <li>
-                        <p class="dui-util-fw-sbld">Incorrect option will set you back with 3 points</p>
-                    </li>
-                    <li>
-                        <p class="dui-util-fw-sbld">You will be directed to the next screen incase of timeout, no
-                            points will be rewarded or deducted.</p>
-                    </li>
-                </ul>
+            <div className="rules-card__actions">
+              <Link
+                className="rules-card__action .rules-page-namespace dui-link dui-link--secondary dui-util-bdr-radi-s dui-util-txt-sm dui-util-spc-pad-xs"
+                to="/"
+              >
+                Go Home
+              </Link>
 
-                <div class="rules-card__actions">
-
-                    <a class="rules-card__action dui-link dui-link--secondary dui-util-bdr-radi-s dui-util-txt-sm dui-util-spc-pad-xs"
-                        href="#">
-                        Go Home
-                    </a>
-
-                    <a
-                        class="rules-card__action dui-link dui-link--primary dui-util-bdr-radi-s dui-util-txt-sm dui-util-spc-pad-xs">
-                        Let's Play
-                    </a>
-
-                </div>
-
-
-            </section>
-
+              <Link
+                className="rules-card__action .rules-page-namespace dui-link dui-link--primary dui-util-bdr-radi-s dui-util-txt-sm dui-util-spc-pad-xs"
+                to={"/quiz/" + id}
+              >
+                Let's Play
+              </Link>
+            </div>
+          </section>
         </main>
+      </section>
     </section>
-
-</section>
-    )
+  );
 }

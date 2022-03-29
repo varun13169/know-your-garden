@@ -20,40 +20,40 @@ export default function QuizPage() {
   }, []);
 
   return (
-    <section class="quiz-page-namespace page-wrap">
-      <section class="quiz-page-namespace page-nav">
+    <section className="quiz-page-namespace page-wrap">
+      <section className="quiz-page-namespace page-nav">
         <Navbar></Navbar>
       </section>
 
-      <section class="quiz-page-namespace page-main">
-        <main class="main-container dui-util-spc-pad-m">
-          <div class="question-card">
-            <h1 class="question-card__title dui-primary-color dui-util-txt-align-cent">
+      <section className="quiz-page-namespace page-main">
+        <main className="main-container dui-util-spc-pad-m">
+          <div className="question-card">
+            <h1 className="question-card__title dui-primary-color dui-util-txt-align-cent">
               Plant Types
             </h1>
 
-            <p class="question-card__question dui-util-txt-align-cent dui-util-spc-pad-s dui-util-txt-md">
+            <p className="question-card__question dui-util-txt-align-cent dui-util-spc-pad-s dui-util-txt-md">
               {quizState.questions[quizState.questionIdx].question}
             </p>
 
-            <div class="question-card__status dui-util-spc-pad-s">
-              <p class="question-card__ques-status dui-util-txt-align-left">
+            <div className="question-card__status dui-util-spc-pad-s">
+              <p className="question-card__ques-status dui-util-txt-align-left">
                 Question:{" "}
                 <span>
                   {quizState.questionIdx + 1}/{quizState.questions.length}
                 </span>
               </p>
-              <p class="question-card__score-status dui-util-txt-align-right">
+              <p className="question-card__score-status dui-util-txt-align-right">
                 Score: <span>0</span>
               </p>
             </div>
 
-            <ul class="dui-ul question-card__options">
+            <ul className="dui-ul question-card__options">
               {quizState.questions[quizState.questionIdx].options.map((op) => {
                 return (
                   <li
                     key={op._id}
-                    class="question-card__option dui-util-bdr-radi-m dui-util-spc-pad-s"
+                    className="question-card__option dui-util-bdr-radi-m dui-util-spc-pad-s"
                     onClick={(e) => {
                       let newQuizState = { ...quizState };
                       const isCorrect =
@@ -64,21 +64,29 @@ export default function QuizPage() {
                           : false;
 
                       if (isCorrect) {
-                        newQuizState.questions = {
-                          ...newQuizState.questions,
+                        newQuizState.questions[quizState.questionIdx] = {
+                          ...quizState.questions[quizState.questionIdx],
                           answered: op._id,
                         };
+
                         newQuizState.score = newQuizState.score + 5;
                       } else {
                         newQuizState.score = newQuizState.score - 1;
                       }
                       newQuizState.questionIdx = newQuizState.questionIdx + 1;
                       // varundev: Revisit this
+                      console.log(
+                        "Varun: " +
+                          newQuizState.questionIdx +
+                          "   " +
+                          (quizState.questions.length - 1)
+                      );
                       if (
                         newQuizState.questionIdx ===
                         quizState.questions.length - 1
                       ) {
-                        navigate("/quiz-category");
+                        navigate("/");
+                        console.log("done");
                       }
 
                       setQuizState(newQuizState);
@@ -87,7 +95,7 @@ export default function QuizPage() {
                     }}
                   >
                     <p>
-                      <span class="dui-util-fw-bld">1) </span>
+                      <span className="dui-util-fw-bld">1) </span>
                       {op.option}
                     </p>
                   </li>
