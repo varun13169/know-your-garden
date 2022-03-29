@@ -3,17 +3,19 @@ import { Navbar } from "../../components";
 import { useEffect } from "react";
 import { useQuiz } from "../../context";
 import { quizeQuestions } from "../../backend/db/quizesQuestions";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function QuizPage() {
   const { quizState, setQuizState } = useQuiz();
+  const { id } = useParams();
   const navigate = useNavigate();
 
   useEffect(() => {
     quizeQuestions;
+    console.log(quizeQuestions);
     setQuizState((quizState) => ({
       ...quizState,
-      questions: quizeQuestions.questions,
+      questions: quizeQuestions[id].questions,
     }));
   }, []);
 

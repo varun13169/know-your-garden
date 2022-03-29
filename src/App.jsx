@@ -6,9 +6,9 @@ export default function App() {
   return (
     <div className={"App " + getTheme()}>
       <Routes>
-        <Route path="/quiz" element={<QuizPage />} />
         <Route path="/" element={<CategoryPage />} />
-        <Route path="/quiz-category" element={<QuizCategoryPage />} />
+        <Route path="/quiz/:id" element={<QuizPage />} />
+        <Route path="/quiz-category/:id" element={<QuizCategoryPage />} />
       </Routes>
     </div>
   );

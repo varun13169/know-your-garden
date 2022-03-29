@@ -34,7 +34,7 @@ export default function CategoryPage() {
               return (
                 <Link
                   className="category-page-namespace category-card dui-util-bdr-radi-m"
-                  to="/quiz-category"
+                  to={"/quiz-category/" + category._id}
                 >
                   <img
                     className="category-page-namespace category-card__img dui-util-bdr-radi-m"
