@@ -45,7 +45,7 @@ const quizeQuestions = {
           { _id: "3", option: "Option 3" },
           { _id: "4", option: "Option 4" },
         ],
-        correctAnswerId: "5",
+        correctAnswerId: "4",
       },
     ],
   },

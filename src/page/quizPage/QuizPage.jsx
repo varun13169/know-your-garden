@@ -63,35 +63,29 @@ export default function QuizPage() {
                           ? true
                           : false;
 
-                      if (isCorrect) {
-                        newQuizState.questions[quizState.questionIdx] = {
-                          ...quizState.questions[quizState.questionIdx],
-                          answered: op._id,
-                        };
+                      // Recording the response
+                      newQuizState.questions[quizState.questionIdx] = {
+                        ...quizState.questions[quizState.questionIdx],
+                        answered: op._id,
+                      };
 
+                      if (isCorrect) {
                         newQuizState.score = newQuizState.score + 5;
                       } else {
                         newQuizState.score = newQuizState.score - 1;
                       }
+
                       newQuizState.questionIdx = newQuizState.questionIdx + 1;
                       // varundev: Revisit this
-                      console.log(
-                        "Varun: " +
-                          newQuizState.questionIdx +
-                          "   " +
-                          (quizState.questions.length - 1)
-                      );
+
                       if (
                         newQuizState.questionIdx ===
                         quizState.questions.length - 1
                       ) {
-                        navigate("/");
-                        console.log("done");
+                        navigate("/result");
                       }
 
                       setQuizState(newQuizState);
-
-                      console.log(e);
                     }}
                   >
                     <p>

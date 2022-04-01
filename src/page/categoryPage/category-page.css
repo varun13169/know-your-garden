@@ -39,6 +39,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--stie-bg-color-quiz);
 }
 
 .category-page-namespace.quiz-category-title {

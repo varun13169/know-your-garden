@@ -25,6 +25,7 @@
   height: 100%;
   overflow: auto;
   display: flex;
+  background-color: var(--stie-bg-color-quiz);
 }
 
 .question-card {
