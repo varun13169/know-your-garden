@@ -1,0 +1,41 @@
+@import "/src/styles.css";
+
+.result-page-namespace.page-nav {
+  grid-area: p_nav;
+}
+
+.result-page-namespace.page-main {
+  grid-area: p_main;
+}
+
+.result-page-namespace.page-wrap {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--stie-bg-color-quiz);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 7.5rem 1fr;
+  grid-template-areas:
+    "p_nav p_nav"
+    "p_main p_main";
+}
+
+.result-page-namespace.main-container {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  background-color: var(--stie-bg-color-quiz);
+}
+
+.question-card__option-correct-result {
+  background-color: var(--dui-primary-color-opc-75pct);
+}
+
+.question-card__option-incorrect-result {
+  background-color: red;
+}
+
+.question-card__option-pointer-events-none {
+  pointer-events: none;
+}
