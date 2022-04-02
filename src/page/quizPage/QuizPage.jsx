@@ -2,8 +2,8 @@ import "./quiz-page.css";
 import { Navbar } from "../../components";
 import { useEffect } from "react";
 import { useQuiz } from "../../context";
-import { quizeQuestions } from "../../backend/db/quizesQuestions";
 import { useNavigate, useParams } from "react-router-dom";
+import axios from "axios";
 
 export default function QuizPage() {
   const { quizState, setQuizState } = useQuiz();
@@ -11,13 +11,20 @@ export default function QuizPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log("Varun");
-    console.log(quizeQuestions);
-    console.log("Kumar");
-    setQuizState((quizState) => ({
-      ...quizState,
-      questions: quizeQuestions[id].questions,
-    }));
+    let config = {
+      headers: {
+        Accept: "*/*",
+      },
+    };
+
+    // Fetch Quizes
+    (async function () {
+      const { data } = await axios.get(`/api/questions/${id}`);
+      setQuizState((quizState) => ({
+        ...quizState,
+        questions: data.questions.questions,
+      }));
+    })();
   }, []);
 
   return (

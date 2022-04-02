@@ -5,6 +5,10 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import { QuizContextProvider, ThemeContextProvider } from "./context";
 
+import { makeServer } from "./server";
+// Call make Server
+makeServer();
+
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <StrictMode>
