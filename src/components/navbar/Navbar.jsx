@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
+import { MoonSVG, SunSVG } from "../../assets/svgReactComponents";
+import { useTheme } from "../../context";
 import "./navbar.css";
 
 export default function Navbar() {
+  const { theme, setTheme } = useTheme();
   return (
     <nav className="dui-nav-sch-act dui-primary-bg-color">
       <Link
@@ -63,39 +66,18 @@ export default function Navbar() {
           </div>
         </li>
         <li>
-          <button className="quiz-app-dui-nav-sch-act__drk-mode-btn dui-nav-sch-act__drk-mode-btn dui-btn reset-button-inherit-parent">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="dui-nav-sch-act__drk-mode-lgt icon icon-tabler icon-tabler-brightness-2"
-              width="44"
-              height="44"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="#ffffff"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <circle cx="12" cy="12" r="3" />
-              <path d="M6 6h3.5l2.5 -2.5l2.5 2.5h3.5v3.5l2.5 2.5l-2.5 2.5v3.5h-3.5l-2.5 2.5l-2.5 -2.5h-3.5v-3.5l-2.5 -2.5l2.5 -2.5z" />
-            </svg>
+          <button
+            className="quiz-app-dui-nav-sch-act__drk-mode-btn dui-nav-sch-act__drk-mode-btn dui-btn reset-button-inherit-parent"
+            onClick={() => {
+              setTheme({
+                ...theme,
+                currentTheme: theme.currentTheme === "light" ? "dark" : "light",
+              });
+            }}
+          >
+            {theme.currentTheme === "dark" && <SunSVG />}
 
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="dui-nav-sch-act__drk-mode-drk dui-util-disp-none icon icon-tabler icon-tabler-moon"
-              width="44"
-              height="44"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="#ffffff"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-            </svg>
+            {theme.currentTheme === "light" && <MoonSVG />}
           </button>
         </li>
       </ul>
