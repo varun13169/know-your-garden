@@ -11,8 +11,9 @@ export default function QuizPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    quizeQuestions;
+    console.log("Varun");
     console.log(quizeQuestions);
+    console.log("Kumar");
     setQuizState((quizState) => ({
       ...quizState,
       questions: quizeQuestions[id].questions,
@@ -44,57 +45,61 @@ export default function QuizPage() {
                 </span>
               </p>
               <p className="question-card__score-status dui-util-txt-align-right">
-                Score: <span>0</span>
+                Score: <span>{quizState.score}</span>
               </p>
             </div>
 
             <ul className="dui-ul question-card__options">
-              {quizState.questions[quizState.questionIdx].options.map((op) => {
-                return (
-                  <li
-                    key={op._id}
-                    className="question-card__option dui-util-bdr-radi-m dui-util-spc-pad-s"
-                    onClick={(e) => {
-                      let newQuizState = { ...quizState };
-                      const isCorrect =
-                        op._id ===
-                        quizState.questions[quizState.questionIdx]
-                          .correctAnswerId
-                          ? true
-                          : false;
+              {quizState.questions[quizState.questionIdx].options.map(
+                (op, idx) => {
+                  return (
+                    <li
+                      key={op._id}
+                      className="question-card__option dui-util-bdr-radi-m dui-util-spc-pad-s"
+                      onClick={(e) => {
+                        let newQuizState = { ...quizState };
+                        const isCorrect =
+                          op._id ===
+                          quizState.questions[quizState.questionIdx]
+                            .correctAnswerId
+                            ? true
+                            : false;
 
-                      // Recording the response
-                      newQuizState.questions[quizState.questionIdx] = {
-                        ...quizState.questions[quizState.questionIdx],
-                        answered: op._id,
-                      };
+                        // Recording the response
+                        newQuizState.questions[quizState.questionIdx] = {
+                          ...quizState.questions[quizState.questionIdx],
+                          answered: op._id,
+                        };
 
-                      if (isCorrect) {
-                        newQuizState.score = newQuizState.score + 5;
-                      } else {
-                        newQuizState.score = newQuizState.score - 1;
-                      }
+                        if (isCorrect) {
+                          newQuizState.score = newQuizState.score + 5;
+                        } else {
+                          newQuizState.score = newQuizState.score - 3;
+                        }
 
-                      newQuizState.questionIdx = newQuizState.questionIdx + 1;
-                      // varundev: Revisit this
+                        newQuizState.questionIdx = newQuizState.questionIdx + 1;
+                        // varundev: Revisit this
 
-                      if (
-                        newQuizState.questionIdx ===
-                        quizState.questions.length - 1
-                      ) {
-                        navigate("/result");
-                      }
+                        if (
+                          newQuizState.questionIdx ===
+                          quizState.questions.length
+                        ) {
+                          navigate("/result");
+                        }
 
-                      setQuizState(newQuizState);
-                    }}
-                  >
-                    <p>
-                      <span className="dui-util-fw-bld">1) </span>
-                      {op.option}
-                    </p>
-                  </li>
-                );
-              })}
+                        setQuizState(newQuizState);
+                      }}
+                    >
+                      <p>
+                        <span className="dui-util-fw-bld">{`${
+                          idx + 1
+                        }) `}</span>
+                        {op.option}
+                      </p>
+                    </li>
+                  );
+                }
+              )}
             </ul>
           </div>
         </main>

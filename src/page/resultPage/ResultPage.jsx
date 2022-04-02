@@ -15,8 +15,11 @@ export default function ResultPage() {
         <main className="result-page-namespace main-container">
           <div className="question-card">
             <h1 className="question-card__title dui-primary-color dui-util-txt-align-cent">
-              Plant Types Result
+              Result
             </h1>
+            <h2 className="question-card__title dui-primary-color dui-util-txt-align-cent">
+              {`Final Score: ${quizState.score}`}
+            </h2>
             {quizState.questions.map((questionDetails) => {
               return (
                 <>
@@ -25,11 +28,11 @@ export default function ResultPage() {
                   </p>
 
                   <ul className="dui-ul question-card__options">
-                    {questionDetails.options.map((op) => {
+                    {questionDetails.options.map((op, idx) => {
                       return (
                         <li
                           key={op._id}
-                          className={`question-card__option dui-util-bdr-radi-m dui-util-spc-pad-s ${
+                          className={`question-card__option dui-util-bdr-radi-m dui-util-spc-pad-s question-card__option-pointer-events-none ${
                             questionDetails.correctAnswerId === op._id
                               ? "question-card__option-correct-result"
                               : ""
@@ -43,7 +46,9 @@ export default function ResultPage() {
                           }`}
                         >
                           <p>
-                            <span className="dui-util-fw-bld">1) </span>
+                            <span className="dui-util-fw-bld">{`${
+                              idx + 1
+                            }) `}</span>
                             {op.option}
                           </p>
                         </li>

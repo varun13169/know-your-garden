@@ -35,3 +35,7 @@
 .question-card__option-incorrect-result {
   background-color: red;
 }
+
+.question-card__option-pointer-events-none {
+  pointer-events: none;
+}
