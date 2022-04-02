@@ -68,27 +68,6 @@ export function makeServer({ environment = "development" } = {}) {
       this.get("/quiz-categories", getAllQuizCategoryHandler.bind(this));
       this.get("/quizes/:categoryId", getQuizByCategoryHandler.bind(this));
       this.get("/questions/:quizId", getQuizQuestionByQuizIdHandler.bind(this));
-
-      // // categories routes (public)
-      // this.get("/categories", getAllCategoriesHandler.bind(this));
-      // this.get("/categories/:categoryId", getCategoryHandler.bind(this));
-
-      // // cart routes (private)
-      // this.get("/user/cart", getCartItemsHandler.bind(this));
-      // this.post("/user/cart", addItemToCartHandler.bind(this));
-      // this.post("/user/cart/:productId", updateCartItemHandler.bind(this));
-      // this.delete(
-      //   "/user/cart/:productId",
-      //   removeItemFromCartHandler.bind(this)
-      // );
-
-      // // wishlist routes (private)
-      // this.get("/user/wishlist", getWishlistItemsHandler.bind(this));
-      // this.post("/user/wishlist", addItemToWishlistHandler.bind(this));
-      // this.delete(
-      //   "/user/wishlist/:productId",
-      //   removeItemFromWishlistHandler.bind(this)
-      // );
     },
   });
 }
