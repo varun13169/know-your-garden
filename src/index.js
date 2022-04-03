@@ -3,7 +3,11 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
-import { QuizContextProvider, ThemeContextProvider } from "./context";
+import {
+  CategoryContextProvider,
+  QuizContextProvider,
+  ThemeContextProvider,
+} from "./context";
 
 import { makeServer } from "./server";
 // Call make Server
@@ -14,9 +18,11 @@ ReactDOM.render(
   <StrictMode>
     <ThemeContextProvider>
       <BrowserRouter>
-        <QuizContextProvider>
-          <App />
-        </QuizContextProvider>
+        <CategoryContextProvider>
+          <QuizContextProvider>
+            <App />
+          </QuizContextProvider>
+        </CategoryContextProvider>
       </BrowserRouter>
     </ThemeContextProvider>
   </StrictMode>,
