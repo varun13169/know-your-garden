@@ -39,6 +39,15 @@
   margin: 2rem 0rem;
 }
 
+.question-card__counter {
+  text-align: right;
+  margin: 2rem 0rem;
+}
+
+.question-card__counter-text-red {
+  color: var(--dui-alert-error-light-font-color);
+}
+
 .question-card__status {
   width: 100%;
   height: fit-content;
