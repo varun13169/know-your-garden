@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -10,7 +11,17 @@ export default function CategoryPage() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    setCategories((categories) => quizeCategories.categories);
+    let config = {
+      headers: {
+        Accept: "*/*",
+      },
+    };
+
+    // Fetch Categories
+    (async function () {
+      const { data } = await axios.get("/api/quiz-categories");
+      setCategories((categories) => data.categories);
+    })();
   }, []);
 
   return (

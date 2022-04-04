@@ -1,16 +1,25 @@
+import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { quizesByCategory } from "../../backend/db/quizes";
 import { Navbar } from "../../components";
 import "./quiz-category-page.css";
 
 export default function QuizCategoryPage() {
   const { id } = useParams();
   const [quizes, setQuizes] = useState([]);
+
   useEffect(() => {
-    const uuid = "9e6be463-6dda-4ace-9667-670d571d6c22";
-    console.log(id);
-    setQuizes(quizesByCategory[id]);
+    let config = {
+      headers: {
+        Accept: "*/*",
+      },
+    };
+
+    // Fetch Quizes
+    (async function () {
+      const { data } = await axios.get(`/api/quizes/${id}`);
+      setQuizes(data.quizzes.models);
+    })();
   }, []);
 
   return (
