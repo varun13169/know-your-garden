@@ -77,6 +77,12 @@
   transform: translate(-50%, -50%);
 }
 
+.quiz-category-filter {
+  width: 54.8rem;
+  margin: 0rem 0rem 2rem 0rem;
+  padding: 2rem;
+}
+
 @media only screen and (max-width: 1070px) {
   .category-page-namespace.category-card-container {
     grid-template-columns: 1fr;

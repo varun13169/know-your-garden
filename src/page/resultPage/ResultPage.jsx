@@ -24,7 +24,11 @@ export default function ResultPage() {
               return (
                 <>
                   <p className="question-card__question dui-util-txt-align-cent dui-util-spc-pad-s dui-util-txt-md">
-                    {questionDetails.question}
+                    {`${questionDetails.question}${
+                      questionDetails.answered === undefined
+                        ? " (Unanswered)"
+                        : ""
+                    }`}
                   </p>
 
                   <ul className="dui-ul question-card__options">
