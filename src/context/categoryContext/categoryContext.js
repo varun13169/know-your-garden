@@ -19,7 +19,7 @@ const CategoryContextProvider = ({ children }) => {
           sortByQuizCount: action.data.sortByQuizCount,
           categoriesToShow: [...state.categoriesToShow].sort((a, b) => {
             const beta =
-              action.data.sortByQuizCount === "LOW_TO_HIGH" ? +1 : -1;
+              action.data.sortByQuizCount === "HIGH_TO_LOW" ? +1 : -1;
             return beta * (Number(b.quizCount) - Number(a.quizCount));
           }),
         };
