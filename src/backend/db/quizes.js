@@ -7,7 +7,7 @@ const quizes = {
       categoryId: "9e6be463-6dda-4ace-9667-670d571d6c22",
       quizImg:
         "https://res.cloudinary.com/duepvqb5b/image/upload/v1648496859/know-your-garden/dummy-pot-plant_h9fgig_okls4c.png",
-      quizName: "Quiz 1",
+      quizName: "Vertical Garden Generics",
       quizDescription: "Quiz Description",
       quizTotalQuestions: 4,
     },
@@ -16,8 +16,8 @@ const quizes = {
       categoryId: "9e6be463-6dda-4ace-9667-670d571d6c22",
       quizImg:
         "https://res.cloudinary.com/duepvqb5b/image/upload/v1648496859/know-your-garden/dummy-pot-plant_h9fgig_okls4c.png",
-      quizName: "Quiz 2",
-      quizDescription: "Quiz Description",
+      quizName: "Know Your Equipments",
+      quizDescription: "Know Your Garden Equipments",
       quizTotalQuestions: 4,
     },
     {
@@ -25,8 +25,8 @@ const quizes = {
       categoryId: "9e6be463-6dda-4ace-9667-670d571d6c22",
       quizImg:
         "https://res.cloudinary.com/duepvqb5b/image/upload/v1648496859/know-your-garden/dummy-pot-plant_h9fgig_okls4c.png",
-      quizName: "Quiz 3",
-      quizDescription: "Quiz Description",
+      quizName: "Knowledege of Plants",
+      quizDescription: "Knowledege of Plants",
       quizTotalQuestions: 4,
     },
     {
@@ -43,8 +43,8 @@ const quizes = {
       categoryId: "95652d9d-f6a7-4088-92f1-429da1a3fe64",
       quizImg:
         "https://res.cloudinary.com/duepvqb5b/image/upload/v1648496859/know-your-garden/dummy-pot-plant_h9fgig_okls4c.png",
-      quizName: "Quiz 1",
-      quizDescription: "Quiz Description",
+      quizName: "Knowledege of Plants",
+      quizDescription: "Knowledege of Plants",
       quizTotalQuestions: 4,
     },
     {
@@ -52,8 +52,8 @@ const quizes = {
       categoryId: "e3acb503-9e2b-46d5-8ff6-e4f2bf97225b",
       quizImg:
         "https://res.cloudinary.com/duepvqb5b/image/upload/v1648496859/know-your-garden/dummy-pot-plant_h9fgig_okls4c.png",
-      quizName: "Quiz 1",
-      quizDescription: "Quiz Description",
+      quizName: "Know Your Equipments",
+      quizDescription: "Know Your Garden Equipments",
       quizTotalQuestions: 4,
     },
     {
@@ -61,7 +61,7 @@ const quizes = {
       categoryId: "b952f1b6-bbe0-4976-bc5a-d92c9837f387",
       quizImg:
         "https://res.cloudinary.com/duepvqb5b/image/upload/v1648496859/know-your-garden/dummy-pot-plant_h9fgig_okls4c.png",
-      quizName: "Quiz 1",
+      quizName: "Garden Generics",
       quizDescription: "Quiz Description",
       quizTotalQuestions: 4,
     },
