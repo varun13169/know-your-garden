@@ -26,6 +26,7 @@
   overflow: auto;
   display: flex;
   background-color: var(--stie-bg-color-quiz);
+  padding: 0rem 0rem 10rem 0rem;
 }
 
 .question-card__option-correct-result {

@@ -14,14 +14,14 @@ const quizeCategories = {
       categoryName: "Balcony Gardens",
       categoryImg:
         "https://res.cloudinary.com/duepvqb5b/image/upload/v1652454510/know-your-garden/photo-1566780901557-4be3b0f7b7f2_p0ouls.jpg",
-      quizCount: 1,
+      quizCount: 3,
     },
     {
       _id: "e3acb503-9e2b-46d5-8ff6-e4f2bf97225b",
       categoryName: "Open Gardens",
       categoryImg:
         "https://res.cloudinary.com/duepvqb5b/image/upload/v1652454589/know-your-garden/photo-1585320806297-9794b3e4eeae_eq16gc.jpg",
-      quizCount: 1,
+      quizCount: 2,
     },
     {
       _id: "b952f1b6-bbe0-4976-bc5a-d92c9837f387",
