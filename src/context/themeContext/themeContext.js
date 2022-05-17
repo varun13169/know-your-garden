@@ -8,7 +8,7 @@ const ThemeContextProvider = ({ children }) => {
       localStorage.getItem("currentTheme")
     )
       ? localStorage.getItem("currentTheme")
-      : "light",
+      : "dark",
   });
 
   const setTheme = (updatedTheme) => {
