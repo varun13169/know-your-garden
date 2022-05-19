@@ -2,9 +2,13 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Navbar } from "../../components";
+import { flushQuizContext } from "../../customHooks";
 import "./quiz-category-page.css";
 
 export default function QuizCategoryPage() {
+  // reset quiz context
+  flushQuizContext();
+
   const { id } = useParams();
   const [quizes, setQuizes] = useState([]);
 

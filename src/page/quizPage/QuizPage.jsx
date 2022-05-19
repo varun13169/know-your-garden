@@ -13,7 +13,7 @@ export default function QuizPage() {
 
   useEffect(() => {
     counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
-    counter == 0 && navigate("/result");
+    counter == 0 && navigate("/result", { replace: true });
   }, [counter]);
 
   console.log(counter);
@@ -107,7 +107,7 @@ export default function QuizPage() {
                           newQuizState.questionIdx ===
                           quizState.questions.length
                         ) {
-                          navigate("/result");
+                          navigate("/result", { replace: true });
                         }
 
                         setQuizState(newQuizState);

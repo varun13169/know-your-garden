@@ -2,14 +2,16 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { quizeCategories } from "../../backend/db/quizCategory";
 import { Navbar, Sidebar } from "../../components";
-import { useCategory } from "../../context";
+import { useCategory, useQuiz } from "../../context";
+import { flushQuizContext } from "../../customHooks";
 import "./category-page.css";
 // import categoryPageStyles from "./category-page.modules.css";
 
 export default function CategoryPage() {
-  // const [categories, setCategories] = useState([]);
+  // reset quiz context
+  flushQuizContext();
+
   const { categoryState, setCategoryState } = useCategory();
 
   useEffect(() => {
