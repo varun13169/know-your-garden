@@ -51,9 +51,11 @@ export default function QuizPage() {
             <div className="question-card__counter">
               <p
                 className={`dui-util-txt-reg dui-util-fw-sbld${
-                  counter <= 10 ? " question-card__counter-text-red " : ""
+                  counter <= 10 && counter % 2 == 0
+                    ? " question-card__counter-text-red "
+                    : ""
                 }`}
-              >{`Time Left ${counter}s`}</p>
+              >{`Time Left: ${counter}s`}</p>
             </div>
 
             <p className="question-card__question dui-util-txt-align-cent dui-util-spc-pad-s dui-util-txt-md">

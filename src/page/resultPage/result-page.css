@@ -40,3 +40,11 @@
 .question-card__option-pointer-events-none {
   pointer-events: none;
 }
+
+.question-card__question-result {
+  margin-top: 5rem;
+}
+
+.question-card__question-unanswered {
+  color: red;
+}

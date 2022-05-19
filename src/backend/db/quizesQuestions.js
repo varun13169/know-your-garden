@@ -29,7 +29,7 @@ const questions = {
         },
         {
           _id: uuid(),
-          question: "Vertical Garden can be made in PVC pipes",
+          question: "Vertical Garden can be made in PVC pipes?",
           options: [
             { _id: "1", option: "Yes, they can be" },
             { _id: "2", option: "No, they can't be" },
@@ -40,7 +40,7 @@ const questions = {
         },
         {
           _id: uuid(),
-          question: "Substrate for vertical orchards",
+          question: "Substrate for vertical orchards?",
           options: [
             { _id: "1", option: "Climate" },
             { _id: "2", option: "Rooting Depth" },
@@ -78,7 +78,7 @@ const questions = {
         },
         {
           _id: uuid(),
-          question: "Vertical Garden can be made in PVC pipes",
+          question: "Vertical Garden can be made in PVC pipes?",
           options: [
             { _id: "1", option: "Yes, they can be" },
             { _id: "2", option: "No, they can't be" },
@@ -89,7 +89,7 @@ const questions = {
         },
         {
           _id: uuid(),
-          question: "Substrate for vertical orchards",
+          question: "Substrate for vertical orchards?",
           options: [
             { _id: "1", option: "Climate" },
             { _id: "2", option: "Rooting Depth" },
@@ -127,7 +127,7 @@ const questions = {
         },
         {
           _id: uuid(),
-          question: "Vertical Garden can be made in PVC pipes",
+          question: "Vertical Garden can be made in PVC pipes?",
           options: [
             { _id: "1", option: "Yes, they can be" },
             { _id: "2", option: "No, they can't be" },
@@ -138,7 +138,7 @@ const questions = {
         },
         {
           _id: uuid(),
-          question: "Substrate for vertical orchards",
+          question: "Substrate for vertical orchards?",
           options: [
             { _id: "1", option: "Climate" },
             { _id: "2", option: "Rooting Depth" },
@@ -176,7 +176,7 @@ const questions = {
         },
         {
           _id: uuid(),
-          question: "Vertical Garden can be made in PVC pipes",
+          question: "Vertical Garden can be made in PVC pipes?",
           options: [
             { _id: "1", option: "Yes, they can be" },
             { _id: "2", option: "No, they can't be" },
@@ -187,7 +187,7 @@ const questions = {
         },
         {
           _id: uuid(),
-          question: "Substrate for vertical orchards",
+          question: "Substrate for vertical orchards?",
           options: [
             { _id: "1", option: "Climate" },
             { _id: "2", option: "Rooting Depth" },
@@ -226,7 +226,7 @@ const questions = {
         },
         {
           _id: uuid(),
-          question: "Vertical Garden can be made in PVC pipes",
+          question: "Vertical Garden can be made in PVC pipes?",
           options: [
             { _id: "1", option: "Yes, they can be" },
             { _id: "2", option: "No, they can't be" },
@@ -237,7 +237,7 @@ const questions = {
         },
         {
           _id: uuid(),
-          question: "Substrate for vertical orchards",
+          question: "Substrate for vertical orchards?",
           options: [
             { _id: "1", option: "Climate" },
             { _id: "2", option: "Rooting Depth" },
@@ -275,7 +275,7 @@ const questions = {
         },
         {
           _id: uuid(),
-          question: "Vertical Garden can be made in PVC pipes",
+          question: "Vertical Garden can be made in PVC pipes?",
           options: [
             { _id: "1", option: "Yes, they can be" },
             { _id: "2", option: "No, they can't be" },
@@ -286,7 +286,7 @@ const questions = {
         },
         {
           _id: uuid(),
-          question: "Substrate for vertical orchards",
+          question: "Substrate for vertical orchards?",
           options: [
             { _id: "1", option: "Climate" },
             { _id: "2", option: "Rooting Depth" },
@@ -324,7 +324,7 @@ const questions = {
         },
         {
           _id: uuid(),
-          question: "Vertical Garden can be made in PVC pipes",
+          question: "Vertical Garden can be made in PVC pipes?",
           options: [
             { _id: "1", option: "Yes, they can be" },
             { _id: "2", option: "No, they can't be" },
@@ -335,7 +335,7 @@ const questions = {
         },
         {
           _id: uuid(),
-          question: "Substrate for vertical orchards",
+          question: "Substrate for vertical orchards?",
           options: [
             { _id: "1", option: "Climate" },
             { _id: "2", option: "Rooting Depth" },
@@ -376,7 +376,7 @@ const questions = {
         },
         {
           _id: uuid(),
-          question: "Vertical Garden can be made in PVC pipes",
+          question: "Vertical Garden can be made in PVC pipes?",
           options: [
             { _id: "1", option: "Yes, they can be" },
             { _id: "2", option: "No, they can't be" },
@@ -387,7 +387,7 @@ const questions = {
         },
         {
           _id: uuid(),
-          question: "Substrate for vertical orchards",
+          question: "Substrate for vertical orchards?",
           options: [
             { _id: "1", option: "Climate" },
             { _id: "2", option: "Rooting Depth" },
@@ -425,7 +425,7 @@ const questions = {
         },
         {
           _id: uuid(),
-          question: "Vertical Garden can be made in PVC pipes",
+          question: "Vertical Garden can be made in PVC pipes?",
           options: [
             { _id: "1", option: "Yes, they can be" },
             { _id: "2", option: "No, they can't be" },
@@ -436,7 +436,7 @@ const questions = {
         },
         {
           _id: uuid(),
-          question: "Substrate for vertical orchards",
+          question: "Substrate for vertical orchards?",
           options: [
             { _id: "1", option: "Climate" },
             { _id: "2", option: "Rooting Depth" },
@@ -477,7 +477,7 @@ const questions = {
         },
         {
           _id: uuid(),
-          question: "Vertical Garden can be made in PVC pipes",
+          question: "Vertical Garden can be made in PVC pipes?",
           options: [
             { _id: "1", option: "Yes, they can be" },
             { _id: "2", option: "No, they can't be" },
@@ -488,7 +488,7 @@ const questions = {
         },
         {
           _id: uuid(),
-          question: "Substrate for vertical orchards",
+          question: "Substrate for vertical orchards?",
           options: [
             { _id: "1", option: "Climate" },
             { _id: "2", option: "Rooting Depth" },

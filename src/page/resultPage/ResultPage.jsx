@@ -23,12 +23,13 @@ export default function ResultPage() {
             {quizState.questions.map((questionDetails) => {
               return (
                 <>
-                  <p className="question-card__question dui-util-txt-align-cent dui-util-spc-pad-s dui-util-txt-md">
-                    {`${questionDetails.question}${
-                      questionDetails.answered === undefined
-                        ? " (Unanswered)"
-                        : ""
-                    }`}
+                  <p className="question-card__question question-card__question-result dui-util-txt-align-cent dui-util-spc-pad-s dui-util-txt-md">
+                    {`${questionDetails.question}`}
+                    {questionDetails.answered === undefined && (
+                      <p className="question-card__question-unanswered dui-util-txt-align-cent dui-util-txt-md">
+                        (Unanswered)
+                      </p>
+                    )}
                   </p>
 
                   <ul className="dui-ul question-card__options">
