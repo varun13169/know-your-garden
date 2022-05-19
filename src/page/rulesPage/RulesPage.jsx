@@ -1,7 +1,11 @@
 import "./rules-page.css";
 import { Link, useParams } from "react-router-dom";
+import { flushQuizContext } from "../../customHooks";
 
 export default function RulesPage() {
+  // reset quiz context
+  flushQuizContext();
+
   const { id } = useParams();
 
   return (

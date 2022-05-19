@@ -5,12 +5,12 @@
   height: 100vh;
   background-color: var(--stie-bg-color-quiz);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 25rem 1fr;
   grid-template-rows: 7.5rem 1fr;
   overflow: auto;
   grid-template-areas:
     "p_nav p_nav"
-    "p_main p_main";
+    "p_sidebar p_main";
 }
 
 .category-page-namespace.page-nav {

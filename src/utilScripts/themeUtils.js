@@ -6,7 +6,7 @@ const getTheme = (theme) => {
     case "light":
       return "light-theme";
     default:
-      return "light-theme";
+      return "dark-theme";
   }
 };
 

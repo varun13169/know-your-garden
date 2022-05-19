@@ -13,7 +13,7 @@ export default function QuizPage() {
 
   useEffect(() => {
     counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
-    counter == 0 && navigate("/result");
+    counter == 0 && navigate("/result", { replace: true });
   }, [counter]);
 
   console.log(counter);
@@ -51,9 +51,11 @@ export default function QuizPage() {
             <div className="question-card__counter">
               <p
                 className={`dui-util-txt-reg dui-util-fw-sbld${
-                  counter <= 10 ? " question-card__counter-text-red " : ""
+                  counter <= 10 && counter % 2 == 0
+                    ? " question-card__counter-text-red "
+                    : ""
                 }`}
-              >{`Time Left ${counter}s`}</p>
+              >{`Time Left: ${counter}s`}</p>
             </div>
 
             <p className="question-card__question dui-util-txt-align-cent dui-util-spc-pad-s dui-util-txt-md">
@@ -107,7 +109,7 @@ export default function QuizPage() {
                           newQuizState.questionIdx ===
                           quizState.questions.length
                         ) {
-                          navigate("/result");
+                          navigate("/result", { replace: true });
                         }
 
                         setQuizState(newQuizState);

@@ -26,6 +26,7 @@
   overflow: auto;
   display: flex;
   background-color: var(--stie-bg-color-quiz);
+  padding: 0rem 0rem 10rem 0rem;
 }
 
 .question-card__option-correct-result {
@@ -38,4 +39,12 @@
 
 .question-card__option-pointer-events-none {
   pointer-events: none;
+}
+
+.question-card__question-result {
+  margin-top: 5rem;
+}
+
+.question-card__question-unanswered {
+  color: red;
 }
