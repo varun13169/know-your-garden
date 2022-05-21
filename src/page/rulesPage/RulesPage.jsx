@@ -35,8 +35,14 @@ export default function RulesPage() {
               </li>
               <li>
                 <p className="dui-util-fw-sbld">
-                  You will be directed to the next screen incase of timeout, no
-                  points will be rewarded or deducted.
+                  You have 60 seconds to answer all the quetions, incase of
+                  timeout.
+                </p>
+              </li>
+              <li>
+                <p className="dui-util-fw-sbld">
+                  No points will be rewarded or deducted for the unanswered
+                  question.
                 </p>
               </li>
             </ul>
