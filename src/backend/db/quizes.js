@@ -33,9 +33,9 @@ const quizes = {
       _id: "QUIZ_4",
       categoryId: "9e6be463-6dda-4ace-9667-670d571d6c22",
       quizImg:
-        "https://res.cloudinary.com/duepvqb5b/image/upload/v1648496859/know-your-garden/dummy-pot-plant_h9fgig_okls4c.png",
-      quizName: "Quiz 4",
-      quizDescription: "Quiz Description",
+        "https://res.cloudinary.com/duepvqb5b/image/upload/v1653129179/know-your-garden/photo-1557234195-bd9f290f0e4d_o7uw3w.jpg",
+      quizName: "Know Your Soil",
+      quizDescription: "Show your knowledge on soil",
       quizTotalQuestions: 4,
     },
 
